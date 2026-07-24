@@ -5,14 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HomeRegistrationEvent {
-    private Long homeId;
-    private String homeName;
-    private List<ApplianceInfo> appliances;
+public class ApplianceInfo {
+    private Long applianceId;
+    private String name;
+    private BigDecimal safeLimitWatt;
 }
