@@ -16,6 +16,7 @@ public class HomeMetrics implements Serializable {
 
     private Long homeId;
     private BigDecimal accumulatedCost = BigDecimal.ZERO;
+    private BigDecimal accumulatedWatt = BigDecimal.ZERO;
     private boolean penaltyActive = false;
     private Map<Long, Integer> applianceBreachCounters = new HashMap<>();
     private Map<Long, Boolean> applianceAnomalyFlags = new HashMap<>();

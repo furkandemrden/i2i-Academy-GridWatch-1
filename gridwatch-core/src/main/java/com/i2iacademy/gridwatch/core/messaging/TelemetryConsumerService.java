@@ -57,6 +57,7 @@ public class TelemetryConsumerService {
         BigDecimal activeRate = penaltyWasActive ? billing.getPenaltyRate() : billing.getNormalRate();
         BigDecimal cost = event.getCurrentWatt().multiply(activeRate);
         metrics.setAccumulatedCost(metrics.getAccumulatedCost().add(cost));
+        metrics.setAccumulatedWatt(metrics.getAccumulatedWatt().add(event.getCurrentWatt()));
 
         boolean penaltyJustActivated = false;
         if (!penaltyWasActive && metrics.getAccumulatedCost().compareTo(billing.getBudgetQuota()) >= 0) {
