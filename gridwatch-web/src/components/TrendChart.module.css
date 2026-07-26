@@ -1,0 +1,20 @@
+.wrap {
+    background: var(--color-surface);
+    border: 1px solid rgba(158, 169, 183, 0.15);
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+  
+  .title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-gray);
+    margin-bottom: 16px;
+  }
+  
+  .empty {
+    color: var(--color-gray);
+    font-size: 13px;
+    padding: 20px 0;
+  }
