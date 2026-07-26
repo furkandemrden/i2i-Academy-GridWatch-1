@@ -64,6 +64,48 @@
     color: var(--color-paper);
   }
   
+  .summaryStrip {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: var(--color-surface);
+    border: 1px solid rgba(158, 169, 183, 0.15);
+    border-radius: var(--radius-md);
+    padding: 18px 28px;
+    margin-bottom: 28px;
+    width: fit-content;
+  }
+  
+  .summaryItem {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .summaryValue {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-blue);
+  }
+  
+  .summaryValueWarn {
+    color: var(--color-copper);
+  }
+  
+  .summaryLabel {
+    font-size: 11px;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  .summaryDivider {
+    width: 1px;
+    height: 32px;
+    background: rgba(158, 169, 183, 0.15);
+  }
+  
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

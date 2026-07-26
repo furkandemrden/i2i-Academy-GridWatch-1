@@ -76,12 +76,14 @@ export default function HomeDetail() {
 
           <ApplianceList appliances={appliances} anomalyFlags={status?.applianceAnomalyFlags} />
         </div>
-
-        <div className={styles.rightColumn}>
+        
+<div className={styles.rightColumn}>
           <TrendChart data={trend} />
           <RecommendationsList recommendations={recommendations} />
         </div>
       </div>
+
+      <p className={styles.footer}>Powered by Furkan Remzi Demirden</p>
     </div>
   );
 }

@@ -36,6 +36,10 @@ export default function HomeList() {
     return () => clearInterval(interval);
   }, []);
 
+  const totalHomes = homes.length;
+  const penaltyCount = Object.values(statuses).filter((s) => s?.penaltyActive).length;
+  const totalWatt = Object.values(statuses).reduce((sum, s) => sum + Number(s?.accumulatedWatt ?? 0), 0);
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -52,6 +56,27 @@ export default function HomeList() {
           </button>
         </div>
       </header>
+
+      {!loading && totalHomes > 0 && (
+        <div className={styles.summaryStrip}>
+          <div className={styles.summaryItem}>
+            <span className={styles.summaryValue}>{totalHomes}</span>
+            <span className={styles.summaryLabel}>Kayıtlı Ev</span>
+          </div>
+          <div className={styles.summaryDivider} />
+          <div className={styles.summaryItem}>
+            <span className={`${styles.summaryValue} ${penaltyCount > 0 ? styles.summaryValueWarn : ''}`}>
+              {penaltyCount}
+            </span>
+            <span className={styles.summaryLabel}>Ceza Tarifesinde</span>
+          </div>
+          <div className={styles.summaryDivider} />
+          <div className={styles.summaryItem}>
+            <span className={styles.summaryValue}>{totalWatt.toFixed(0)} W</span>
+            <span className={styles.summaryLabel}>Toplam Anlık Tüketim</span>
+          </div>
+        </div>
+      )}
 
       {loading ? (
         <p className={styles.loading}>Yükleniyor...</p>
