@@ -1,3 +1,12 @@
+# GridWatch ⚡
+
+Gerçek zamanlı ev enerji tüketimi izleme, otomatik tarife/anomali tespiti ve
+yapay zeka destekli tasarruf önerileri sunan uçtan uca bir IoT analitik platformu.
+
+Bu proje, i2i Academy kapsamında bireysel olarak geliştirilmiştir.
+
+## Mimari Genel Bakış
+
 - **gridwatch-core** — Ana backend. Ev/cihaz kaydı, tarife ve anomali kural motoru,
   Ignite tabanlı anlık metrik yönetimi, Gemini entegrasyonu, REST API'ler.
 - **gridwatch-sensors** — Kayıtlı ev ve cihazlar için gerçekçi, periyodik telemetri
