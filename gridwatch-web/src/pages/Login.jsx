@@ -4,8 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import styles from './Login.module.css';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('admin');
+  const [password, setPassword] = useState('admin');
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
